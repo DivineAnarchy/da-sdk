@@ -1,5 +1,5 @@
 {
-  "name": "@diversityeth/da-sdk",
+  "name": "divine-anarchy-sdk",
   "version": "1.0.0",
   "description": "Make on-chain analytics easier",
   "main": "index.js",
@@ -9,6 +9,9 @@
     "tsc:w": "tsc -w --outDir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "@DiversityETH",
   "license": "ISC",
