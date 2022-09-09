@@ -1,8 +1,16 @@
 import axios from 'axios';
 import { ethers } from 'ethers';
 
-export default async function getAbi(ETHERSCAN_API_KEY, CONTRACT_ADDR) {
-    const params = {
+type UrlParams = {
+    [key: string]: string;
+    module: string;
+    action: string;
+    address: string;
+    apikey: string;
+}
+
+export default async function getAbi(ETHERSCAN_API_KEY: string, CONTRACT_ADDR: string) {
+    const params: UrlParams = {
         module: 'contract',
         action: 'getabi',
         address: CONTRACT_ADDR,

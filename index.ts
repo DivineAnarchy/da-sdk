@@ -6,6 +6,8 @@ import {
     getContract,
     convertEventsToTxList
 } from './features';
+
+import { ConvertEventsToTxListOptions } from './features/convertEventsToTxList';
 import { TransferOptions } from './features/getContractTransfers';
 
 class DivineSDK {
@@ -30,13 +32,13 @@ class DivineSDK {
         return getContract(contract_address, abi, this.provider);
     }
 
-    async getContractTransfers(contract, options: TransferOptions) {
+    async getContractTransfers(contract: ethers.Contract, options: TransferOptions) {
         return getContractTransfers(contract, this.provider, options);
     }
 
-    async convertEventsToTxList(contract, events, options = {}) {
+    async convertEventsToTxList(contract: ethers.Contract, events: ethers.Event[], options: ConvertEventsToTxListOptions = {}) {
         return convertEventsToTxList(events, this.provider, contract, options);
     }
 }
 
-export default DivineSDK;
+module.exports = DivineSDK;

@@ -1,5 +1,5 @@
-import DivineSDK from "./index";
 import * as dotenv from 'dotenv';
+const DivineSDK = require('./index');
 
 dotenv.config();
 
