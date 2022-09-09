@@ -1,17 +1,14 @@
 # Docs .... who needs em
 
-Some sample code:
-```ts
-import DivineSDK from "./index";
-import * as dotenv from 'dotenv';
-
-dotenv.config();
+Some sample code using nodejs:
+```js
+const DivineSDK = require('divine-anarchy-sdk');
 
 async function main() {
     const bad_apple_contract = "0x94ee593b5e9bf08ff5caab70e827e009db0e2712"
     const sdk = new DivineSDK(
-        process.env.MY_ETHERSCAN_API_KEY as string,
-        process.env.MY_INFURA_API_KEY as string
+        "3W4S4QMQP57N4W83P2SP1A99Q8NNZ2SGIH",
+        "2085b411450b46f9a7498607d8ee9ca5"
     );
 
     const contract = await sdk.getContract(bad_apple_contract);
@@ -29,4 +26,14 @@ async function main() {
 }
 
 main().catch(err => console.log(err));
+```
+
+Will output:
+```sh
+block 14383272 -> 15501803: Found 78 events
+Tx hash: 0xf8e8eca720f40648d1183a3cbf9ad05df7498f2c8d0928c1cbd205b93e98795b
+Burned DA Token: 6509
+Burned by wallet: 0xe2165a834F93C39483123Ac31533780b9c679ed4
+Burned in block: 14383702
+Burned at: Mon, 14 Mar 2022 08:44:13 GMT
 ```
