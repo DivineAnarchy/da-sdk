@@ -1,6 +1,6 @@
 {
   "name": "divine-anarchy-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make on-chain analytics easier",
   "main": "index.js",
   "scripts": {
