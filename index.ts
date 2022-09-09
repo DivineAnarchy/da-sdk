@@ -17,7 +17,7 @@ class DivineSDK {
         this.ETHERSCAN_API_KEY = ETHERSCAN_API_KEY;
         this.INFURA_API_KEY    = INFURA_API_KEY;
 
-        this.provider = new ethers.providers.InfuraProvider("mainnet", INFURA_API_KEY);;
+        this.provider = new ethers.providers.InfuraProvider("mainnet", INFURA_API_KEY);
     }
 
     async getContract(contract_address: string, abi: ethers.ContractInterface | null = null) {
